@@ -18,8 +18,8 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    public User(Integer id, String username, String email, String password, String firstname, String lastname, Date birthdate, String address, String phone, ERole role6, List<RendezVous> rendezVousList) {
-        this.id = id;
+    public User( String username, String email, String password, String firstname, String lastname, Date birthdate, String address, String phone, ERole role6, List<RendezVous> rendezVousList) {
+
         this.username = username;
         this.email = email;
         this.password = password;
@@ -77,6 +77,7 @@ public class User {
     /*private Set<Consultation> consultationsList = new HashSet<>();
 
     public Set<Consultation> getConsultations() {
+
         return this.consultationsList;
     }*/
 

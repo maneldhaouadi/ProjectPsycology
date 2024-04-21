@@ -15,15 +15,15 @@ import java.util.Set;
 @Getter
 @Setter
 @NoArgsConstructor
-public class Consultation {
-    public Consultation(Integer idC, RendezVous rendezVous) {
-        this.idC = idC;
-        this.rendezVous = rendezVous;
-    }
 
+public class Consultation {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 private Integer idC;
+
+    public Consultation(RendezVous rendezVous) {
+        this.rendezVous = rendezVous;
+    }
 
     @OneToOne
     @JoinColumn(name="rendezVous_id")

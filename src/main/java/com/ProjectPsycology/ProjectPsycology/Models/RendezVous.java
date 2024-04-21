@@ -13,8 +13,16 @@ import java.util.Date;
 @Getter
 @Setter
 @NoArgsConstructor
-@AllArgsConstructor
+
 public class RendezVous {
+    public RendezVous(Date dateRendezVous, User user, Consultation consultation, boolean accepte) {
+
+        this.dateRendezVous = dateRendezVous;
+        this.user = user;
+        this.consultation = consultation;
+        this.accepte = accepte;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idR;
